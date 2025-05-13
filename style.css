@@ -1,0 +1,217 @@
+/* ====== VARIABLES Y RESETEO ====== */
+:root {
+  --color-fondo: #FFF8F0;
+  --color-primario: #FFB3B3;
+  --color-secundario: #B3E5FC;
+  --color-detalle: #FFD180;
+  --color-hover: #A1D8F3;
+  --color-footer: #C8E6C9;
+  --color-texto: #333;
+  --color-titulo: #4A4A4A;
+
+  --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    color: #72cdfa;
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* ====== HERO / BANNER ====== */
+.hero {
+  background: linear-gradient(to bottom right, var(--color-primario), var(--color-secundario));
+  color: var(--color-texto);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--color-detalle);
+  color: var(--color-texto);
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--color-hover);
+}
+
+/* ====== NAVEGACIÓN ====== */
+nav {
+  background-color: var(--color-detalle);
+  text-align: center;
+  padding: 12px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-hover);
+}
+
+/* ====== SECCIONES ====== */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--color-titulo);
+}
+
+.wide-img {
+  max-width: 90%;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+
+/* ====== TARJETAS ====== */
+.services, .trainers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-secundario);
+  padding: 20px;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--color-texto);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-hover);
+}
+
+/* ====== TESTIMONIOS ====== */
+.testimonials {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.testimonials blockquote {
+  background-color: #fff;
+  border-left: 5px solid var(--color-primario);
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+}
+body{
+  background-color: #fffea8;
+}
+
+
+.testimonials cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--color-titulo);
+}
+
+/* ====== GALERÍA ====== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ====== FORMULARIO DE CONTACTO ====== */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  padding: 25px 10px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .services,
+  .trainers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
